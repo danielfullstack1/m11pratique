@@ -1,0 +1,171 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definir a cor de fundo do body e a fonte */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Seção Sobre a Loja */
+#sobre {
+    background-color: white;
+    padding: 30px 0;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sobre-conteudo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.descricao-loja {
+    max-width: 500px;
+    padding-left: 20px;
+}
+
+.descricao-loja h2 {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+.descricao-loja p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Seção Produtos */
+#produtos {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+#produtos h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+.produtos-lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.produto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.produto button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Para tablets e dispositivos menores */
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .descricao-loja {
+        padding-left: 0;
+    }
+
+    .produtos-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para celulares */
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .produtos-lista {
+        grid-template-columns: 1fr;
+    }
+}
